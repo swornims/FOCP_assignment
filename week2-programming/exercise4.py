@@ -10,5 +10,7 @@ entered_no_of_students = int(
 each_student = entered_no_of_sweets // entered_no_of_students
 remaining_sweets = entered_no_of_sweets % entered_no_of_students
 
+grammar = "sweets" if remaining_sweets != 1 else "sweets"
+
 print(f"Each student will get {each_student} sweets and the teacher will have {
-      remaining_sweets} sweets left over")
+      remaining_sweets} {grammar} left over")
