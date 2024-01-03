@@ -3,12 +3,19 @@
 
 BAD_PASSWORDS = ['password', 'letmein', 'sesame', 'hello', 'justinbieber']
 
-entered_password = input("Enter your password: ")
 
-if len(entered_password) >= 8 and len(entered_password) <= 12:
-    if entered_password in BAD_PASSWORDS:
-        print("Password is too common")
-    else:
-        print("Password saved successfully!")
-else:
-    print("Password length is too short")
+password = input("Enter your password: ")
+confirm_password = input("Confirm your password: ")
+valid_password = valid_length = good_password = False
+
+if len(password) >= 8 and len(password) <= 12:
+    valid_length = True
+
+    if password not in BAD_PASSWORDS:
+        good_password = True
+
+    if password == confirm_password:
+        valid_password = True
+
+print("Valid password") if valid_length and valid_password and good_password else print(
+    "Invalid password. Enter again")

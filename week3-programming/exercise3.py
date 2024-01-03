@@ -5,8 +5,9 @@ password = input("Enter your password: ")
 confirm_password = input("Confirm your password: ")
 valid_password = valid_length = False
 
-if 8 <= len(password) >= 12:
+if len(password) >= 8 and len(password) <= 12:
     valid_length = True
+    print('Valid length for the password')
 
     if password == confirm_password:
         valid_password = True
