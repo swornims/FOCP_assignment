@@ -22,7 +22,7 @@ def login_user(entered_username, entered_password):
             username_list.append(username)
             password_list.append(password)
 
-    if (entered_username not in username or password_hash(entered_password) != password_list[username_list.index(entered_username)]):
+    if (entered_username not in username_list or password_hash(entered_password) != password_list[username_list.index(entered_username)]):
         raise ValueError("Credential Error!")
     else:
         print(f"Logged in as {entered_username}")
